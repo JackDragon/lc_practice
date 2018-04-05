@@ -14,7 +14,9 @@ def convert(s, numRows):
         2 4   8 10  14      i(2n-2)+2, (i+1)(2n-2)-2
         3     9     15      i(2n-2)+n
         """
-        rows = [[] for _ in range(numRows)]
+        if numRows == 1 or len(s) <= numRows:
+            return s
+        rows = [''] * numRows
         for n in range(numRows):
             C = (2*numRows - 2)
             i = 0
@@ -22,12 +24,12 @@ def convert(s, numRows):
                 total = i*C+n
                 if total >= len(s):
                     break
-                rows[n].append(s[total])
+                rows[n] += s[total]
                 if n not in [0, numRows-1]:
                     total = (i+1)*C-n
                     if total >= 0 and total < len(s):
-                        rows[n].append(s[total])
+                        rows[n] += s[total]
                 i += 1
-        return "".join("".join(row) for row in rows)
+        return "".join(rows)
 
 convert("PAYPALISHIRING", 3)
