@@ -1,53 +1,25 @@
 class Solution(object):
-    def long(s):
-        """
-        :type s: str
-        :rtype: int
-        """
-        if not s:
-            return 0
-        longest = 1
-        longest_s = ""
-        a, b = 0, 0
-        sub = ""
-        while b < len(s):
-            if s[b] in sub:
-                print("Found {} in {}".format(s[b], sub))
-                if len(sub) > longest:
-                    longest = len(sub)
-                    longest_s = sub
-                a += sub.index(s[b]) + 1
-                sub = s[a:b]
-                print("Sub now: {}".format(sub))
-            sub += s[b]
-            b += 1
-        if len(sub) > longest:
-            longest = len(sub)
-            longest_s = sub
-        return longest, longest_s
-    
-    def lengthOfLongestSubstring(self, s):
-        """
-        :type s: str
-        :rtype: int
-        """
-        if not s:
-            return 0
-        longest = 1
-        # longest_s = ""
-        a, b = 0, 0
-        sub = ""
-        while b < len(s):
-            if s[b] in sub:
-                # print("Found {} in {}".format(s[b], sub))
-                if len(sub) > longest:
-                    longest = len(sub)
-                    # longest_s = sub
-                a += sub.index(s[b]) + 1
-                sub = s[a:b]
-                # print("Sub now: {}".format(sub))
-            sub += s[b]
-            b += 1
-        if len(sub) > longest:
-            longest = len(sub)
-        return longest
+    def nth(self, a, b, n):
+        if not a or not b:
+            return (a+b)[n]
+        ai = len(a) >> 1
+        bi = len(b) >> 1
+        med_a = a[ai]
+        med_b = b[bi]
+        if ai + bi >= n:
+            if med_a <= med_b:
+                return self.nth(a, b[:bi], n)
+            else:
+                return self.nth(a[:ai], b, n)
+        else:
+            if med_a <= med_b:
+                return self.nth(a[ai +1:], b, n-ai-1)
+            else:
+                return self.nth(a, b[bi+1:], n-bi-1)
+                
+    def findMedianSortedArrays(self, A, B):
+        total_len = len(A) + len(B)
+        if total_len % 2 == 0:
+            return (self.nth(A, B, total_len >> 1) + self.nth(A, B, (total_len>>1)-1)) * 0.5
+        else:
+            return self.nth(A, B, total_len >> 1)
