@@ -5,8 +5,8 @@ class Solution(object):
         :type end: str
         :rtype: bool
         """
-        if not start and not end:
-            return True
+        # if not start and not end:
+        #     return True
         if len(start) != len(end) or start.replace("X", "") != end.replace("X", ""):
             return False
         start_d, end_d = {"L":[], "R":[]}, {"L":[], "R":[]}
@@ -18,7 +18,7 @@ class Solution(object):
             if letter == "X":
                 continue
             end_d[letter].append(i)
-        print(str(start_d), str(end_d))
+        # print(str(start_d), str(end_d))
         for i in range(len(start_d["L"])):
             if start_d["L"][i] < end_d["L"][i]:
                 #print("L:" + str(start_d["L"][i]) + "<" + str(end_d["L"][i]))
