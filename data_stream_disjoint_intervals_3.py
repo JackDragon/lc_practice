@@ -4,14 +4,20 @@ class Interval(object):
         self.start = s
         self.end = e
     def __eq__(self, other):
-        return self.start == other.start and self.end == other.start
+        if self.start == other.start and self.end == other.end:
+            return True
+        print self.start, other.start, self.end, other.end
+        return False
+            # return self.start == other.start and self.end == other.start
 
 class SummaryRanges(object):
     def __eq__(self, other):
         siv = self.getIntervals()
         oiv = other.getIntervals()
         for i, s in enumerate(siv):
-            if s != oiv[i]:
+            if not s == oiv[i]:
+                print("s:", s.start, s.end)
+                print("o:", oiv[i].start, oiv[i].end)
                 return False
         return True
     def __init__(self):
@@ -32,7 +38,7 @@ class SummaryRanges(object):
         if val + 1 in self.dic:
             self.dic[val], self.dic[val + 1] = self.dic[val] + self.dic[val + 1], 0
         previous = val - 1
-        if previous not in self.dic or previous <= 0:
+        if previous not in self.dic or previous < 0:
             return
         while True:
             if self.dic[previous] == 0 and previous - 1 in self.dic:
@@ -82,7 +88,8 @@ for i in seq:
     obj.addNum(i)
     obj2.addNum(i)
     done.append(i)
-    if (obj.getIntervals() != obj2.getIntervals()):
+    # if (obj.getIntervals() != obj2.getIntervals()):
+    if (not obj == obj2):
         print("NOT EQUAL:")
         print("Done so far:", done)
         print([(iv.start, iv.end) for iv in obj.getIntervals()])
