@@ -7,37 +7,25 @@
 class SummaryRanges(object):
 
     def __init__(self):
-        """
-        Initialize your data structure here.
-        """
-        self.dic = {}
+        self.intervals = []
 
     def addNum(self, val):
-        """
-        :type val: int
-        :rtype: void
-        """
-        if val in self.dic:
-            return
-        else:
-            self.dic[val] = 1
-        if val + 1 in self.dic:
-            self.dic[val], self.dic[val + 1] = self.dic[val] + self.dic[val + 1], 0
-        previous = val - 1
-        if previous not in self.dic or previous <= 0:
-            return
-        while True:
-            if self.dic[previous] == 0 and previous - 1 in self.dic:
-                previous -= 1
-            else:
-                break
-        self.dic[previous], self.dic[val] = self.dic[previous] + self.dic[val], 0
+        heapq.heappush(self.intervals, (val, Interval(val, val)))
 
     def getIntervals(self):
-        """
-        :rtype: List[Interval]
-        """
-        return [Interval(x, x + self.dic[x] - 1) for x in sorted(self.dic) if self.dic[x] > 0]
+        stack = []
+        while self.intervals:
+            idx, cur = heapq.heappop(self.intervals)
+            if not stack:
+                stack.append((idx, cur))
+            else:
+                _, prev = stack[-1]
+                if prev.end + 1 >= cur.start:
+                    prev.end = max(prev.end, cur.end)
+                else:
+                    stack.append((idx, cur))
+        self.intervals = stack
+        return list(map(lambda x: x[1], stack))
 
 
 # Your SummaryRanges object will be instantiated and called as such:
