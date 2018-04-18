@@ -17,4 +17,23 @@ class Solution:
         :type digits: str
         :rtype: List[str]
         """
-        
+        d = {'2':set(['a','b','c']),
+             '3':set(['d','e','f']),
+             '4':set(['g','h','i']),
+             '5':set(['j','k','l']),
+             '6':set(['m','n','o']),
+             '7':set(['p','q','r','s']),
+             '8':set(['t','u','v']),
+             '9':set(['w','x','y','z']),
+            }
+        s = set()
+        for digit in digits:
+            if not s:
+                s = d[digit].copy()
+            else:
+                temp = set()
+                for old_str in s:
+                    for new_str in d[digit]:
+                        temp.add(old_str+new_str)
+                s = temp
+        return list(s)
