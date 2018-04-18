@@ -1,21 +1,21 @@
-import re
 class Solution:
-    def mostCommonWord(self, paragraph, banned):
+    def longestCommonPrefix(self, strs):
         """
-        :type paragraph: str
-        :type banned: List[str]
+        :type strs: List[str]
         :rtype: str
         """
-        d = {}
-        for s in paragraph.lower().split(" "):
-            s = re.sub('[^A-Za-z0-9]+', '', s)
-            if s not in banned:
-                if s in d:
-                    d[s]+=1
-                else:
-                    d[s]=1
-        mx = max(d.values())
-        # print(d)
-        for k, v in d.items():
-            if v == mx:
-                return(k)
+        if not strs:
+            return ""
+        i = 0
+        ret_pre = ""
+        while True:
+            pre = ""
+            for s in strs:
+                if len(s) < i+1:
+                    return ret_pre
+                if not pre:
+                    pre = s[i]
+                elif pre != s[i]:
+                    return ret_pre
+            i += 1
+            ret_pre += pre
