@@ -6,16 +6,20 @@ class Solution:
         """
         total = len(A)
         A.sort()
-        visited = set([A[0]])
+        visited = A
+        visited.sort()
         # pairs = set()
         n_map = {}
         for n in A[1:]:
-            for i in visited:
-                for j in visited:
+            for a in range(len(visited)):
+                for b in range(a, len(visited)):
+                    i, j = visited[a], visited[b]
                     # if i >= j:
                     # # if i >= j and i*j == n:
                     #     total += 1
-                    if i >= j and i * j == n:
+                    if i >= n or j >= n:
+                        continue
+                    if j >= i and i * j == n:
                         if n not in n_map:
                             n_map[n] = 0
                         perms = 1
@@ -33,13 +37,8 @@ class Solution:
                         # print(2, perms)
                         n_map[n] += perms
                         # print(n_map)
-                        # pairs.add((n, i, j))
-                        # pairs.add((n, j, i))
+                        # pairs.append((n, i, j))
+                        # pairs.append((n, j, i))
                         total += perms
                     # print((n, i, j), total)
-            visited.add(n)
         return total%(10**9+7)
-
-# sol = Solution()
-# sol.numFactoredBinaryTrees([2,4,5,10])
-# sol.numFactoredBinaryTrees([18,3,6,2])
