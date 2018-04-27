@@ -27,4 +27,9 @@ class Solution(object):
         :type A: List[int]
         :rtype: int
         """
-        
+        matrix = [1] * len(A)
+        for i in xrange(len(A)):
+            matrix[(i - A[i] + 1) % len(A)] -= 1
+        for i in xrange(1, len(A)):
+            matrix[i] += matrix[i - 1]
+        return matrix.index(max(matrix))
