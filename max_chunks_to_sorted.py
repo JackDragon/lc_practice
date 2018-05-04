@@ -4,12 +4,9 @@ class Solution:
         :type arr: List[int]
         :rtype: int
         """
-        index=[arr[i] for i in sorted(arr)]
-        index=sorted(range(len(arr)), key=arr.__getitem__)
-        print(index)
-        maximum = 0
-        temp = 0
-        for i, x in enumerate(index):
+        ind=sorted(range(len(arr)), key=arr.__getitem__)
+        max_n = temp = 0
+        for i, x in enumerate(ind):
             temp = max(temp, x)
-            if temp == i: maximum += 1
-        return maximum
+            if temp == i: max_n += 1
+        return max_n
