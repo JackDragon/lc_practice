@@ -58,7 +58,7 @@ def isFib(i, j, k):
     # print(i, j, k, (int(i) + int(j)) == int(k))
     return (int(i) + int(j)) == int(k)
 
-solution = Solution()
-print(solution.s_helper("123456579"))
-print(solution.s_helper("214748364721474836422147483641"))
-print(solution.s_helper("539834657215398346785398346991079669377161950407626991734534318677529701785098211336528511"))
+# solution = Solution()
+# print(solution.s_helper("123456579"))
+# print(solution.s_helper("214748364721474836422147483641"))
+# print(solution.s_helper("539834657215398346785398346991079669377161950407626991734534318677529701785098211336528511"))

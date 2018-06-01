@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="661cedf3-aea1-4eec-9f81-adba4bb403d9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/max_area_of_island.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/split_into_fibonacci_seq.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/split_into_fibonacci_seq.py" beforeDir="false" afterPath="$PROJECT_DIR$/split_into_fibonacci_seq.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -93,16 +91,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="split_into_fibonacci_seq.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="split_into_fibonacci_seq.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/split_into_fibonacci_seq.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="8" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+            <state relative-caret-position="365">
+              <caret line="61" column="23" lean-forward="true" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="max_area_of_island.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="max_area_of_island.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/max_area_of_island.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="479">
@@ -141,8 +139,8 @@
         <option value="$PROJECT_DIR$/num_factored_binary_tree.py" />
         <option value="$PROJECT_DIR$/contest_4-1.py" />
         <option value="$PROJECT_DIR$/push_dominoes.py" />
-        <option value="$PROJECT_DIR$/split_into_fibonacci_seq.py" />
         <option value="$PROJECT_DIR$/max_area_of_island.py" />
+        <option value="$PROJECT_DIR$/split_into_fibonacci_seq.py" />
       </list>
     </option>
   </component>
@@ -559,17 +557,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/split_into_fibonacci_seq.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="8" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/max_area_of_island.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="479">
           <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/split_into_fibonacci_seq.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="61" column="23" lean-forward="true" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
         </state>
       </provider>
     </entry>
