@@ -10,6 +10,8 @@ class Solution(object):
         :type head: ListNode
         :rtype: ListNode
         """
+        if not head or not head.next:
+            return
         p1 = p2 = head
         while p1.next and p2.next:
             p2 = p2.next
@@ -31,5 +33,5 @@ n1, n2, n3, n4 = ListNode(1),ListNode(2),ListNode(3),ListNode(1)
 n1.next = n2
 n2.next = n3
 n3.next = n4
-n4.next = n1
+n4.next = None
 print(solution.detectCycle(n1))
