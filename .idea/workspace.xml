@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="661cedf3-aea1-4eec-9f81-adba4bb403d9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/rh_tp1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ml_pi2.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,15 +25,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="split_into_fibonacci_seq.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/split_into_fibonacci_seq.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1159">
-              <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="linked_list_cycle_2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/linked_list_cycle_2.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -109,11 +100,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rh_tp1.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="rh_tp1.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rh_tp1.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="855">
               <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ml_pi2.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ml_pi2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="855">
+              <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
             </state>
           </provider>
         </entry>
@@ -163,6 +163,7 @@
         <option value="$PROJECT_DIR$/gi2_gc1.py" />
         <option value="$PROJECT_DIR$/gi2_gc2.py" />
         <option value="$PROJECT_DIR$/rh_tp1.py" />
+        <option value="$PROJECT_DIR$/ml_pi2.py" />
       </list>
     </option>
   </component>
@@ -394,13 +395,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/contest_4-1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/push_dominoes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
@@ -751,6 +745,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="855">
           <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ml_pi2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
         </state>
       </provider>
     </entry>
